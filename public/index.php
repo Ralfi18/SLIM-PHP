@@ -16,5 +16,7 @@ $app = AppFactory::create();
 $app->addErrorMiddleware(true, false, false);
 
 $app->get('/', [IndexController::class, "index"]);
+$app->get('/get-all', [IndexController::class, "getProducts"]);
+$app->get('/set', [IndexController::class, "adProduct"]);
 
 $app->run();
